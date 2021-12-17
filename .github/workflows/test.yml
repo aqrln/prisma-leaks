@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         exposeGc: [true, false]
-        tests: [2, 10]
+        tests: [10]
         engine: ["library", "binary"]
     services:
       postgres:
