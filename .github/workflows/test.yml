@@ -11,6 +11,7 @@ jobs:
         exposeGc: [true, false]
         tests: [10]
         engine: ["library", "binary"]
+        jestTransformer: ['ts-jest', '@swc/jest']
     services:
       postgres:
         image: postgres
@@ -34,6 +35,7 @@ jobs:
           yarn
           python inflate_tests.py ${{matrix.tests}}
           yarn prisma db push --schema prisma/${{matrix.engine}}.prisma
+          echo "JEST_TRANSFORMER=${{matrix.jestTransformer}}" >> $GITHUB_ENV
 
       - name: test
         if: ${{matrix.exposeGc == false}}

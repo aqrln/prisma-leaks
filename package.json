@@ -11,6 +11,8 @@
     "prisma": "prisma"
   },
   "devDependencies": {
+    "@swc/core": "^1.2.120",
+    "@swc/jest": "^0.2.15",
     "@types/faker": "^5.5.8",
     "@types/jest": "^27.0.1",
     "@types/lodash": "^4.14.173",
