@@ -1,5 +1,7 @@
 name: monitor memory usage
-on: push
+on:
+  - push
+  - workflow_dispatch
 
 jobs:
   test:
