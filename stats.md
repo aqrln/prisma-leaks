@@ -14,3 +14,19 @@ $ jest --runInBand --logHeapUsage --no-cache
  PASS   test  tests/copy5.test.ts (883 MB heap size)
  PASS   test  tests/query.test.ts (985 MB heap size)
 ```
+
+## 2.30.3, linux-x86_64
+
+```
+ PASS   test  tests/copy5.test.ts (265 MB heap size)
+ PASS   test  tests/copy7.test.ts (349 MB heap size)
+ PASS   test  tests/copy2.test.ts (459 MB heap size)
+ PASS   test  tests/copy6.test.ts (661 MB heap size)
+ PASS   test  tests/copy9.test.ts (863 MB heap size)
+ PASS   test  tests/copy8.test.ts (630 MB heap size)
+ PASS   test  tests/query.test.ts (832 MB heap size)
+ PASS   test  tests/copy3.test.ts (1034 MB heap size)
+ PASS   test  tests/copy4.test.ts (1237 MB heap size)
+ PASS   test  tests/copy10.test.ts (947 MB heap size)
+ PASS   test  tests/copy1.test.ts (1141 MB heap size)
+```
