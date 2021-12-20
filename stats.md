@@ -1,4 +1,4 @@
-All tests run with `CI=true yarn test --runInBand --logHeapUsage --no-cache` on Node.js 17.3.0.
+All tests were run with `CI=true yarn test --runInBand --logHeapUsage --no-cache` on Node.js 17.3.0.
 
 ## 3.6.0, linux-x86_64, library
 
