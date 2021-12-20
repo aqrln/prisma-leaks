@@ -1,13 +1,18 @@
 "use strict";
 
+const baseConfig = {
+  displayName: "test",
+  testEnvironment: "node",
+  verbose: false,
+  collectCoverage: false,
+  silent: true,
+  testTimeout: 60000,
+};
+
 const configs = {
   "ts-jest": {
-    displayName: "test",
+    ...baseConfig,
     preset: "ts-jest",
-    testEnvironment: "node",
-    verbose: false,
-    collectCoverage: false,
-    silent: true,
     globals: {
       "ts-jest": {
         tsconfig: "tsconfig.json",
@@ -16,11 +21,7 @@ const configs = {
   },
 
   "@swc/jest": {
-    displayName: "test",
-    testEnvironment: "node",
-    verbose: false,
-    collectCoverage: false,
-    silent: true,
+    ...baseConfig,
     transform: {
       "\\.ts$": [
         "@swc/jest",
