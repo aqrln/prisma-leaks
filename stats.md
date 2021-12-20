@@ -48,6 +48,22 @@ PASS test tests/copy5.test.ts (883 MB heap size)
 PASS test tests/query.test.ts (985 MB heap size)
 ```
 
+## 3.6.0, darwin-arm64, binary
+
+```
+PASS test tests/copy8.test.ts (270 MB heap size)
+PASS test tests/copy9.test.ts (484 MB heap size)
+PASS test tests/copy1.test.ts (488 MB heap size)
+PASS test tests/copy3.test.ts (701 MB heap size)
+PASS test tests/copy2.test.ts (914 MB heap size)
+PASS test tests/copy7.test.ts (511 MB heap size)
+PASS test tests/copy10.test.ts (462 MB heap size)
+PASS test tests/copy6.test.ts (557 MB heap size)
+PASS test tests/copy4.test.ts (641 MB heap size)
+PASS test tests/query.test.ts (734 MB heap size)
+PASS test tests/copy5.test.ts (942 MB heap size)
+```
+
 ## 3.0.2, linux-x86_64, library
 
 ```
@@ -95,6 +111,675 @@ PASS test tests/copy4.test.ts (1134 MB heap size)
 PASS test tests/query.test.ts (858 MB heap size)
 PASS test tests/copy5.test.ts (953 MB heap size)
 ```
+
+## 3.0.2, darwin-arm64, binary
+
+```
+FAIL test tests/copy9.test.ts (246 MB heap size)
+FAIL test tests/copy1.test.ts (436 MB heap size)
+FAIL test tests/copy8.test.ts (459 MB heap size)
+FAIL test tests/copy2.test.ts (646 MB heap size)
+FAIL test tests/copy3.test.ts (833 MB heap size)
+FAIL test tests/copy10.test.ts (1021 MB heap size)
+FAIL test tests/query.test.ts (1210 MB heap size)
+FAIL test tests/copy7.test.ts (893 MB heap size)
+FAIL test tests/copy6.test.ts (1081 MB heap size)
+FAIL test tests/copy4.test.ts (1269 MB heap size)
+FAIL test tests/copy5.test.ts (1456 MB heap size)
+```
+
+<details>
+<summary>Details</summary>
+
+```
+$ jest --runInBand --logHeapUsage --no-cache
+FAIL test tests/copy9.test.ts (246 MB heap size)
+  ● users › should be created without relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53594
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy9.test.ts:10:9)
+
+  ● users › should be created with relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53594
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy9.test.ts:10:9)
+
+  ● users › should support related field updates
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53594
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy9.test.ts:10:9)
+
+FAIL test tests/copy1.test.ts (436 MB heap size)
+  ● users › should be created without relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53605
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy1.test.ts:10:9)
+
+  ● users › should be created with relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53605
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy1.test.ts:10:9)
+
+  ● users › should support related field updates
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53605
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy1.test.ts:10:9)
+
+FAIL test tests/copy8.test.ts (459 MB heap size)
+  ● users › should be created without relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53616
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy8.test.ts:10:9)
+
+  ● users › should be created with relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53616
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy8.test.ts:10:9)
+
+  ● users › should support related field updates
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53616
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy8.test.ts:10:9)
+
+FAIL test tests/copy2.test.ts (646 MB heap size)
+  ● users › should be created without relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53627
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy2.test.ts:10:9)
+
+  ● users › should be created with relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53627
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy2.test.ts:10:9)
+
+  ● users › should support related field updates
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53627
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy2.test.ts:10:9)
+
+FAIL test tests/copy3.test.ts (833 MB heap size)
+  ● users › should be created without relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53638
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy3.test.ts:10:9)
+
+  ● users › should be created with relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53638
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy3.test.ts:10:9)
+
+  ● users › should support related field updates
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53638
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy3.test.ts:10:9)
+
+FAIL test tests/copy10.test.ts (1021 MB heap size)
+  ● users › should be created without relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53649
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy10.test.ts:10:9)
+
+  ● users › should be created with relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53649
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy10.test.ts:10:9)
+
+  ● users › should support related field updates
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53649
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy10.test.ts:10:9)
+
+FAIL test tests/query.test.ts (1210 MB heap size)
+  ● users › should be created without relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53660
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/query.test.ts:10:9)
+
+  ● users › should be created with relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53660
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/query.test.ts:10:9)
+
+  ● users › should support related field updates
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53660
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/query.test.ts:10:9)
+
+FAIL test tests/copy7.test.ts (893 MB heap size)
+  ● users › should be created without relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53671
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy7.test.ts:10:9)
+
+  ● users › should be created with relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53671
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy7.test.ts:10:9)
+
+  ● users › should support related field updates
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53671
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy7.test.ts:10:9)
+
+FAIL test tests/copy6.test.ts (1081 MB heap size)
+  ● users › should be created without relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53682
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy6.test.ts:10:9)
+
+  ● users › should be created with relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53682
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy6.test.ts:10:9)
+
+  ● users › should support related field updates
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53682
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy6.test.ts:10:9)
+
+FAIL test tests/copy4.test.ts (1269 MB heap size)
+  ● users › should be created without relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53693
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy4.test.ts:10:9)
+
+  ● users › should be created with relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53693
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy4.test.ts:10:9)
+
+  ● users › should support related field updates
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53693
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy4.test.ts:10:9)
+
+FAIL test tests/copy5.test.ts (1456 MB heap size)
+  ● users › should be created without relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53704
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy5.test.ts:10:9)
+
+  ● users › should be created with relations
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53704
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy5.test.ts:10:9)
+
+  ● users › should support related field updates
+
+
+    Invalid `prisma.users.deleteMany()` invocation:
+
+
+      connect ECONNREFUSED ::1:53704
+
+       8 |
+       9 | describe("users", () => {
+    > 10 |   beforeEach(async () => {
+         |         ^
+      11 |     await prisma.users.deleteMany();
+      12 |   });
+      13 |
+
+      at cb (node_modules/@prisma/client/runtime/index.js:36940:17)
+      at Object.<anonymous> (tests/copy5.test.ts:10:9)
+
+Test Suites: 11 failed, 11 total
+Tests:       33 failed, 33 total
+Snapshots:   0 total
+Time:        20.691 s
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+```
+
+</details>
 
 ## 2.30.3, linux-x86_64
 
