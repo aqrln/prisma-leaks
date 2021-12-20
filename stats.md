@@ -1,5 +1,21 @@
 All tests run with `CI=true yarn test --runInBand --logHeapUsage --no-cache`
 
+## 3.6.0, linux-x86_64
+
+```
+PASS test tests/copy5.test.ts (268 MB heap size)
+PASS test tests/copy7.test.ts (364 MB heap size)
+PASS test tests/copy2.test.ts (485 MB heap size)
+PASS test tests/copy6.test.ts (694 MB heap size)
+PASS test tests/copy9.test.ts (598 MB heap size)
+PASS test tests/copy8.test.ts (809 MB heap size)
+PASS test tests/query.test.ts (1010 MB heap size)
+PASS test tests/copy3.test.ts (1219 MB heap size)
+PASS test tests/copy4.test.ts (1429 MB heap size)
+PASS test tests/copy10.test.ts (1638 MB heap size)
+PASS test tests/copy1.test.ts (1847 MB heap size)
+```
+
 ## 3.6.0, darwin-arm64
 
 ```
@@ -14,6 +30,22 @@ PASS test tests/copy10.test.ts (983 MB heap size)
 PASS test tests/copy6.test.ts (1191 MB heap size)
 PASS test tests/copy5.test.ts (883 MB heap size)
 PASS test tests/query.test.ts (985 MB heap size)
+```
+
+## 3.0.2, linux-x86_64
+
+```
+PASS test tests/copy5.test.ts (265 MB heap size)
+PASS test tests/copy7.test.ts (474 MB heap size)
+PASS test tests/copy2.test.ts (475 MB heap size)
+PASS test tests/copy6.test.ts (685 MB heap size)
+PASS test tests/copy9.test.ts (646 MB heap size)
+PASS test tests/copy4.test.ts (856 MB heap size)
+PASS test tests/copy8.test.ts (1062 MB heap size)
+PASS test tests/query.test.ts (851 MB heap size)
+PASS test tests/copy3.test.ts (1053 MB heap size)
+PASS test tests/copy10.test.ts (1258 MB heap size)
+PASS test tests/copy1.test.ts (1463 MB heap size)
 ```
 
 ## 3.0.2, darwin-arm64
@@ -716,6 +748,22 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 ```
 
 </details>
+
+## 2.28.0, linux-x86_64
+
+```
+PASS test tests/copy5.test.ts (264 MB heap size)
+PASS test tests/copy7.test.ts (348 MB heap size)
+PASS test tests/copy2.test.ts (457 MB heap size)
+PASS test tests/copy6.test.ts (658 MB heap size)
+PASS test tests/copy9.test.ts (860 MB heap size)
+PASS test tests/copy8.test.ts (1061 MB heap size)
+PASS test tests/query.test.ts (719 MB heap size)
+PASS test tests/copy3.test.ts (916 MB heap size)
+PASS test tests/copy4.test.ts (1126 MB heap size)
+PASS test tests/copy10.test.ts (811 MB heap size)
+PASS test tests/copy1.test.ts (1012 MB heap size)
+```
 
 ## 2.28.0, darwin-arm64
 
