@@ -1,6 +1,6 @@
 All tests run with `CI=true yarn test --runInBand --logHeapUsage --no-cache`
 
-## 3.6.0, linux-x86_64
+## 3.6.0, linux-x86_64, library
 
 ```
 PASS test tests/copy5.test.ts (268 MB heap size)
@@ -16,7 +16,23 @@ PASS test tests/copy10.test.ts (1638 MB heap size)
 PASS test tests/copy1.test.ts (1847 MB heap size)
 ```
 
-## 3.6.0, darwin-arm64
+## 3.6.0, linux-x86_64, binary
+
+```
+PASS test tests/copy5.test.ts (270 MB heap size)
+PASS test tests/copy7.test.ts (381 MB heap size)
+PASS test tests/copy2.test.ts (477 MB heap size)
+PASS test tests/copy6.test.ts (690 MB heap size)
+PASS test tests/copy9.test.ts (601 MB heap size)
+PASS test tests/copy8.test.ts (805 MB heap size)
+PASS test tests/query.test.ts (1018 MB heap size)
+PASS test tests/copy3.test.ts (1230 MB heap size)
+PASS test tests/copy4.test.ts (1444 MB heap size)
+PASS test tests/copy10.test.ts (1665 MB heap size)
+PASS test tests/copy1.test.ts (1869 MB heap size)
+```
+
+## 3.6.0, darwin-arm64, library
 
 ```
 PASS test tests/copy8.test.ts (273 MB heap size)
@@ -32,7 +48,7 @@ PASS test tests/copy5.test.ts (883 MB heap size)
 PASS test tests/query.test.ts (985 MB heap size)
 ```
 
-## 3.0.2, linux-x86_64
+## 3.0.2, linux-x86_64, library
 
 ```
 PASS test tests/copy5.test.ts (265 MB heap size)
@@ -48,7 +64,23 @@ PASS test tests/copy10.test.ts (1258 MB heap size)
 PASS test tests/copy1.test.ts (1463 MB heap size)
 ```
 
-## 3.0.2, darwin-arm64
+## 3.0.2, linux-x86_64, binary
+
+```
+PASS test tests/copy5.test.ts (267 MB heap size)
+PASS test tests/copy7.test.ts (480 MB heap size)
+PASS test tests/copy2.test.ts (477 MB heap size)
+PASS test tests/copy6.test.ts (688 MB heap size)
+PASS test tests/copy9.test.ts (654 MB heap size)
+PASS test tests/copy8.test.ts (864 MB heap size)
+PASS test tests/query.test.ts (1073 MB heap size)
+PASS test tests/copy3.test.ts (1283 MB heap size)
+PASS test tests/copy4.test.ts (931 MB heap size)
+PASS test tests/copy10.test.ts (1142 MB heap size)
+PASS test tests/copy1.test.ts (1351 MB heap size)
+```
+
+## 3.0.2, darwin-arm64, library
 
 ```
 PASS test tests/copy9.test.ts (265 MB heap size)
